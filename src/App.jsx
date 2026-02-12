@@ -47,11 +47,11 @@ const App = () => {
                     <div className="h-full flex flex-col items-center justify-center text-center px-2 sm:px-0">
                         {currentPage === 0 && (
                             <div className="animate-fadeIn">
-                                <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-red-500 mb-4 sm:mb-6" style={{ fontFamily: 'Georgia, serif' }}>
-                                    Hi, Happy Valentine's Day! 💌
+                                <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-red-500 mb-4 sm:mb-6 tracking-tighter" style={{ fontFamily: 'Georgia, serif' }}>
+                                    Hi, Happy Valentine's Day!
                                 </h1>
                                 <p className="text-base sm:text-lg md:text-xl text-gray-700 mb-6 sm:mb-8 leading-relaxed px-4">
-                                    This is a special message just for you...
+                                    This is a little surprise I made for you. Just click the "Next" button to see what's inside!
                                 </p>
                                 <button onClick={nextPage}
                                     className="bg-red-500 hover:bg-red-600 text-white font-semibold py-2.5 px-6 sm:py-3 sm:px-8 rounded-full shadow-lg transition-all transform hover:scale-105 text-sm sm:text-base cursor-pointer">
@@ -63,12 +63,13 @@ const App = () => {
                         {currentPage === 1 && (
                             <div className="animate-fadeIn">
                                 <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-pink-600 mb-4 sm:mb-6" style={{ fontFamily: 'Georgia, serif' }}>
-                                    You Make My Heart Smile 💗
-                                </h2>
-                                <p className="text-sm sm:text-base md:text-lg text-gray-700 mb-4 leading-relaxed max-w-md px-4">
-                                    Every moment with you is like a beautiful dream. Your smile brightens my day,
-                                    and your laughter is my favorite melody. You are the sweetest part of my life.
-                                </p>
+    You’re Someone Special 💗
+</h2>
+<p className="text-sm sm:text-base md:text-lg text-gray-700 mb-4 leading-relaxed max-w-md px-4">
+    You bring so much joy into my life, and I can’t stop smiling when I think of you. 
+    Today feels extra special… and I have something just for you. 💕
+</p>
+
                                 <div className="flex gap-3 sm:gap-4 mt-6 sm:mt-8">
                                     <button onClick={prevPage}
                                         className="bg-gray-400 hover:bg-gray-500 text-white font-semibold py-2.5 px-4 sm:py-3 sm:px-6 rounded-full shadow-lg transition-all transform hover:scale-105 text-sm sm:text-base cursor-pointer">
