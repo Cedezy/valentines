@@ -88,7 +88,7 @@ const App = () => {
                                 <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-red-600 mb-4 sm:mb-6 px-2" style={{ fontFamily: 'Georgia, serif' }}>
                                     Will You Be My Valentine? 💘
                                 </h2>
-                                <img className="w-32 sm:w-40 md:w-48 mx-auto mb-6 animate-bounce-slow" src={flower} alt="flower" />
+                                
                                 <div className="flex gap-4 sm:gap-6 mt-4 sm:mt-8 justify-center items-center relative">
                                     <button
                                         onClick={handleYes}
