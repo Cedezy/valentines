@@ -82,47 +82,8 @@ const App = () => {
                             </div>
                         )}
 
-                        {/* Gift Box - Before Opening */}
-                        {currentPage === 2 && !giftOpened && !showSweet && (
-                            <div className="animate-fadeIn">
-                                <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-pink-600 mb-6 sm:mb-8" style={{ fontFamily: 'Georgia, serif' }}>
-                                    I Have a Surprise for You! 🎁
-                                </h2>
-                                <div 
-                                    onClick={openGift}
-                                    className="gift-box cursor-pointer transform hover:scale-110 transition-all duration-300 my-8"
-                                >
-                                    <div className="gift-container relative">
-                                        {/* Gift Box */}
-                                        <div className="box bg-gradient-to-br from-red-400 to-red-600 w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 rounded-lg shadow-2xl mx-auto relative animate-bounce-slow">
-                                            {/* Ribbon Vertical */}
-                                            <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-6 sm:w-8 h-full bg-yellow-300 shadow-md"></div>
-                                            {/* Ribbon Horizontal */}
-                                            <div className="absolute top-1/2 left-0 transform -translate-y-1/2 w-full h-6 sm:h-8 bg-yellow-300 shadow-md"></div>
-                                            {/* Bow */}
-                                            <div className="absolute -top-6 sm:-top-8 left-1/2 transform -translate-x-1/2">
-                                                <div className="text-5xl sm:text-6xl md:text-7xl">🎀</div>
-                                            </div>
-                                            {/* Sparkles */}
-                                            <div className="absolute -top-2 -left-2 text-2xl animate-ping">✨</div>
-                                            <div className="absolute -top-2 -right-2 text-2xl animate-ping" style={{ animationDelay: '0.5s' }}>✨</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <p className="text-base sm:text-lg text-gray-600 mt-6 animate-pulse font-semibold">
-                                    👆 Click to open! 👆
-                                </p>
-                                <button
-                                    onClick={prevPage}
-                                    className="mt-8 bg-gray-300 hover:bg-gray-400 text-gray-700 font-semibold py-2 px-5 sm:px-6 rounded-full shadow transition-all text-sm sm:text-base cursor-pointer"
-                                >
-                                    ← Back
-                                </button>
-                            </div>
-                        )}
-
-                        {/* The Question - After Opening Gift */}
-                        {currentPage === 2 && giftOpened && !showSweet && (
+                        {/* The Question - First */}
+                        {currentPage === 2 && !showSweet && (
                             <div className="animate-fadeIn">
                                 <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-red-600 mb-4 sm:mb-6 px-2" style={{ fontFamily: 'Georgia, serif' }}>
                                     Will You Be My Valentine? 💘
@@ -155,13 +116,47 @@ const App = () => {
                             </div>
                         )}
 
-                        {/* Sweet Message After Yes */}
-                        {currentPage === 2 && showSweet && (
+                        {/* Gift Box - After Clicking Yes */}
+                        {currentPage === 2 && showSweet && !giftOpened && (
                             <div className="animate-fadeIn">
-                                <div className="text-5xl sm:text-6xl md:text-7xl animate-bounce mb-4">🎉💖🎊</div>
-                                <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-pink-600 mb-4 sm:mb-6 px-2" style={{ fontFamily: 'Georgia, serif' }}>
+                                <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-pink-600 px-2" style={{ fontFamily: 'Georgia, serif' }}>
                                     Yay! You Said Yes! 🥰
                                 </h2>
+                                <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-pink-600 mb-6 sm:mb-8" style={{ fontFamily: 'Georgia, serif' }}>
+                                    I Have a Surprise for You! 🎁
+                                </h2>
+                                <div 
+                                    onClick={openGift}
+                                    className="gift-box cursor-pointer transform hover:scale-110 transition-all duration-300 my-8"
+                                >
+                                    <div className="gift-container relative">
+                                        {/* Gift Box */}
+                                        <div className="box bg-gradient-to-br from-red-400 to-red-600 w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 rounded-lg shadow-2xl mx-auto relative animate-bounce-slow">
+                                            {/* Ribbon Vertical */}
+                                            <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-6 sm:w-8 h-full bg-yellow-300 shadow-md"></div>
+                                            {/* Ribbon Horizontal */}
+                                            <div className="absolute top-1/2 left-0 transform -translate-y-1/2 w-full h-6 sm:h-8 bg-yellow-300 shadow-md"></div>
+                                            {/* Bow */}
+                                            <div className="absolute -top-6 sm:-top-8 left-1/2 transform -translate-x-1/2">
+                                                <div className="text-5xl sm:text-6xl md:text-7xl">🎀</div>
+                                            </div>
+                                            {/* Sparkles */}
+                                            <div className="absolute -top-2 -left-2 text-2xl animate-ping">✨</div>
+                                            <div className="absolute -top-2 -right-2 text-2xl animate-ping" style={{ animationDelay: '0.5s' }}>✨</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p className="text-base sm:text-lg text-gray-600 mt-6 animate-pulse font-semibold">
+                                    👆 Click to open your gift! 👆
+                                </p>
+                            </div>
+                        )}
+
+                        {/* Sweet Message After Opening Gift */}
+                        {currentPage === 2 && showSweet && giftOpened && (
+                            <div className="animate-fadeIn">
+                                <div className="text-5xl sm:text-6xl md:text-7xl animate-bounce mb-4">🎉💖🎊</div>
+                                
                                 <img className="w-32 sm:w-40 md:w-48 mx-auto mb-4" src={flower} alt="flower" />
                                 <p className="text-lg sm:text-xl md:text-2xl text-gray-700 mb-3 sm:mb-4 leading-relaxed px-4 font-bold">
                                     BULAK OH DAWATA HIHI
@@ -173,9 +168,7 @@ const App = () => {
                         )}
                     </div>
 
-                    <div className="absolute bottom-2 sm:bottom-4 left-1/2 transform -translate-x-1/2 text-gray-400 text-xs sm:text-sm">
-                        Page {currentPage + 1} of 3
-                    </div>
+                    
                 </div>
             </div>
 
