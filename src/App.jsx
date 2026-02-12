@@ -36,9 +36,9 @@ const App = () => {
     };
 
     return (
-        <div className="min-h-screen flex items-center justify-center p-2 sm:p-4 bg-gradient-to-br from-pink-100 via-red-50 to-purple-100">
+        <div className="min-h-screen flex items-center justify-center p-2 sm:p-4 bg-linear-to-br from-pink-100 via-red-50 to-purple-100">
             <div className="relative w-full max-w-2xl">
-                <div className="bg-white rounded-lg shadow-2xl w-full min-h-[500px] sm:min-h-[400px] p-6 sm:p-8 md:p-12 relative overflow-hidden border-2 sm:border-4 border-red-200">
+                <div className="bg-white rounded-lg shadow-2xl w-full h-150 p-6 sm:p-8 md:p-12 relative overflow-hidden border-2 sm:border-4 border-red-200">
                     <div className="absolute top-2 sm:top-4 left-2 sm:left-4 text-red-300 text-xl sm:text-2xl animate-pulse">💕</div>
                     <div className="absolute top-2 sm:top-4 right-2 sm:right-4 text-pink-300 text-xl sm:text-2xl animate-pulse">💖</div>
                     <div className="absolute bottom-2 sm:bottom-4 left-2 sm:left-4 text-pink-400 text-xl sm:text-2xl animate-pulse">💗</div>
@@ -63,12 +63,11 @@ const App = () => {
                         {currentPage === 1 && (
                             <div className="animate-fadeIn">
                                 <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-pink-600 mb-4 sm:mb-6" style={{ fontFamily: 'Georgia, serif' }}>
-    You’re Someone Special 💗
-</h2>
-<p className="text-sm sm:text-base md:text-lg text-gray-700 mb-4 leading-relaxed max-w-md px-4">
-    You bring so much joy into my life, and I can’t stop smiling when I think of you. 
-    Today feels extra special… and I have something just for you. 💕
-</p>
+                                    You’re Someone Special 💗
+                                </h2>
+                                <p className="text-sm sm:text-base md:text-lg text-gray-700 mb-4 leading-relaxed max-w-md px-4">  
+                                    Today feels super special… and I have something just for you. 💕
+                                </p>
 
                                 <div className="flex gap-3 sm:gap-4 mt-6 sm:mt-8">
                                     <button onClick={prevPage}
@@ -132,7 +131,7 @@ const App = () => {
                                 >
                                     <div className="gift-container relative">
                                         {/* Gift Box */}
-                                        <div className="box bg-gradient-to-br from-red-400 to-red-600 w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 rounded-lg shadow-2xl mx-auto relative animate-bounce-slow">
+                                        <div className="box bg-linear-to-br from-red-400 to-red-600 w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 rounded-lg shadow-2xl mx-auto relative animate-bounce-slow">
                                             {/* Ribbon Vertical */}
                                             <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-6 sm:w-8 h-full bg-yellow-300 shadow-md"></div>
                                             {/* Ribbon Horizontal */}
