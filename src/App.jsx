@@ -157,7 +157,7 @@ const App = () => {
                             <div className="animate-fadeIn">
                                 <div className="text-5xl sm:text-6xl md:text-7xl animate-bounce mb-4">🎉💖🎊</div>
                                 
-                                <img className="w-32 sm:w-40 md:w-48 mx-auto mb-4" src={flower} alt="flower" />
+                                <img className="w-48 sm:w-56 md:w-48 mx-auto mb-4" src={flower} alt="flower" />
                                 <p className="text-lg sm:text-xl md:text-2xl text-gray-700 mb-3 sm:mb-4 leading-relaxed px-4 font-bold">
                                     BULAK OH DAWATA HIHI
                                 </p>
